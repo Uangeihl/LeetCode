@@ -7,17 +7,10 @@ import java.util.Map;
  * 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。
  */
 
-public class twoSum_1 {
-    public static void main(String[] args) {
-        int[] nums = {3, 2, 4};
-        int target = 6;
-        Solution solution = new Solution();
-        System.out.println(Arrays.toString(solution.twoSum(nums, target)));
-    }
-}
+public class TwoSum_1 {
+/*
 
-/*class Solution {
-    public int[] twoSum(int[] nums, int target) {
+    public static int[] twoSum(int[] nums, int target) {
         int[] result = new int[2];
         for (int i = 0; i < nums.length; i++) {
             for (int j = i+1; j < nums.length; j++) {
@@ -29,9 +22,9 @@ public class twoSum_1 {
         }
         return null;
     }
-}*/
-class Solution {
-    public int[] twoSum(int[] nums, int target) {
+*/
+
+    public static int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             map.put(target - nums[i], i);
@@ -43,4 +36,13 @@ class Solution {
         }
         return new int[2];
     }
+
+    public static void main(String[] args) {
+        int[] nums = {3, 2, 4};
+        int target = 6;
+        System.out.println(Arrays.toString(twoSum(nums, target)));
+    }
 }
+
+
+
