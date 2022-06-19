@@ -11,24 +11,22 @@ import java.util.List;
 public class SummaryRanges_228 {
     public static List<String> summaryRanges(int[] nums) {
         List<String> list = new ArrayList<>();
+        if (nums.length == 0) return list;
         int temp = nums[0];
-        for (int i = 1, j = 1; i < nums.length; i++) {
-            if (nums[i] == temp + j) {
+        for (int i = 1, j = 1; i <= nums.length; i++) {
+            while (i != nums.length && nums[i] == temp + j) {
                 j++;
-                continue;
-            } else if (j == 1) {
-                list.add("" + temp);
-            } else {
-                list.add("" + temp + "->" + nums[i - 1]);
+                i++;
             }
-            temp = nums[i];
+            list.add("" + temp + (j == 1 ? "" : "->" + nums[i - 1]));
+            if (i != nums.length) temp = nums[i];
             j = 1;
         }
         return list;
     }
 
     public static void main(String[] args) {
-        int[] nums = {0, 2, 3, 4, 5, 7};
+        int[] nums = {};
         System.out.println(summaryRanges(nums));
     }
 }
