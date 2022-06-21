@@ -7,6 +7,8 @@ public class IsPowerOfTwo_231 {
         if (n == 1) return true;
         if (n % 2 != 0 || n == 0) return false;
         return isPowerOfTwo(n / 2);
+        //在2^x的二进制中只有一位1，n&(n-1)可以消除最后一位1
+        //return n > 0 && (n & (n - 1)) == 0;
     }
 
     public static void main(String[] args) {
