@@ -28,10 +28,7 @@ public class GuessNumber_374 {
     }
 
     static int guess(int num) {
-        int n = 6;
-        if (num > n) return -1;
-        if (num < n) return 1;
-        else return 0;
+        return Integer.compare(7, num);
     }
 
     public static void main(String[] args) {
