@@ -18,6 +18,7 @@ public class CheckRecord_551 {
             if (absent > 1 || late > 2) return false;
         }
         return true;
+//        return (s.indexOf('A') == s.lastIndexOf('A')) && (!s.contains("LLL"));
     }
 
     public static void main(String[] args) {
