@@ -5,7 +5,7 @@ public class ConvertToTitle_ {
     public static String convertToTitle(int columnNumber) {
         StringBuffer res = new StringBuffer();
         while (columnNumber > 0) {
-            res.append(Character.toChars('A' + columnNumber % 26 - 1));
+            res.append(Character.toChars('A' + --columnNumber % 26));
             columnNumber /= 26;
         }
         return String.valueOf(res.reverse());
