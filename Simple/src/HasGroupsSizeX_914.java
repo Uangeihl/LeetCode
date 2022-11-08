@@ -13,8 +13,7 @@ public class HasGroupsSizeX_914 {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i : deck) {
             map.put(i, map.getOrDefault(i, 0) + 1);
-
-     }
+        }
         int g = -1;
         for (Integer i : map.values()) {
             if (g == -1) g = i;
