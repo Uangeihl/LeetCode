@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-
 /**
  * 给你一个含重复值的二叉搜索树（BST）的根节点 root ，找出并返回 BST 中的所有 众数（即，出现频率最高的元素）。
  * 如果树中有不止一个众数，可以按 任意顺序 返回。
@@ -9,26 +8,25 @@ import java.util.List;
  * 结点右子树中所含节点的值 大于等于 当前节点的值
  * 左子树和右子树都是二叉搜索树
  */
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode() {
-    }
-
-    TreeNode(int val) {
-        this.val = val;
-    }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-}
-
 public class FindMode_501 {
+    static class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode() {
+        }
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }
     List<Integer> answer = new ArrayList<Integer>();
     int base, count, maxCount;
 
