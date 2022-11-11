@@ -4,6 +4,21 @@
  * 整个树 的坡度就是其所有节点的坡度之和。
  */
 public class FindTilt_563 {
+    static class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode() {
+        }
+        TreeNode(int val) {
+            this.val = val;
+        }
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }
     public int findTilt(TreeNode root) {
         if (root == null) return 0;
         return findTilt(root.right) + findTilt(root.left) + Math.abs(help_563(root.right) - help_563(root.left));
