@@ -9,16 +9,14 @@
  */
 public class MinDeletionSize_944 {
     public static int minDeletionSize(String[] strs) {
-        int count = 0, flag = 0;
+        int count = 0;
         for (int i = 0; i < strs[0].length(); i++) {
             for (int j = 1; j < strs.length; j++) {
                 if (strs[j].charAt(i) < strs[j - 1].charAt(i)) {
-                    flag = 1;
+                    count++;
                     break;
                 }
             }
-            count += flag;
-            flag = 0;
         }
         return count;
     }
