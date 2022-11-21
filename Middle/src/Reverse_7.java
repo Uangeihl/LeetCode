@@ -5,18 +5,14 @@
  */
 public class Reverse_7 {
     public static int reverse(int x) {
-        int flag = 1, sum = 0;
-        if (x < 0) {
-            flag = -1;
-            x *= -1;
-        }
-        while (x > 0) {
-            int temp = x % 10;
-            sum = sum * 10 + temp;
+        int res = 0;
+        while (x != 0) {
+            if (res < Integer.MIN_VALUE / 10 || res > Integer.MAX_VALUE / 10) return 0;
+            int dig = x % 10;
+            res = res * 10 + dig;
             x /= 10;
-            if (sum > Math.pow(2, 31) / 10 && x > 0) return 0;
         }
-        return sum * flag;
+        return res;
     }
 
     public static void main(String[] args) {
